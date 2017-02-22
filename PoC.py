@@ -16,7 +16,7 @@ else:
     def sync():
         libc.sync()
 
-def transmitBits(tmpfile,bits, T0, readsize):
+def transmit_bits(tmpfile,bits, T0, readsize):
 	sync() #drop cache
 	fp = open(tmpfile)	
 	offset = 0
