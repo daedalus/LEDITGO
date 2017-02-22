@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env python
 # Proof of concept for data exfiltration through HDD Activity Led
 # Leaking (a lot of) Data from Air-Gapped Computers via the (small) Hard Drive LED 
 # Based on paper http://cyber.bgu.ac.il/advanced-cyber/system/files/LED-it-GO_0.pdf
