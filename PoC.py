@@ -56,7 +56,7 @@ def itob16(i):
     return itob(i).zfill(16)
 
 def transmit_packet(payload):
-        preamble = "1010101010101010"
+        preamble = "10101010"
         payload_size = len(payload)
 	print "preamble, size, payload, crc32"
         print preamble, itob16(payload_size), atob(payload), itob32(zlib.crc32(payload))
