@@ -63,7 +63,7 @@ def transmit_packet(payload):
         dataONOFF = manchester(preamble+itob16(payload_size)+atob(payload)+itob32(zlib.crc32(payload)))
         #print data
         time.sleep(1)
-        transmitBits('/dev/sda',dataONOFF,0.01,4096)
+        transmit_bits('/dev/sda',dataONOFF,0.01,4096)
 
 def main():
     while True:
