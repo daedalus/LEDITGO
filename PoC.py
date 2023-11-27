@@ -29,10 +29,10 @@ def transmit_bits(tmpfile, bits, T0, readsize):
     fp.seek(offset)
     for b in list(bits):
         # sync()
-        if (b == '0'):
-            print("0 sleep " + str(T0))
+        if b == '0':
+            print(f"0 sleep {str(T0)}")
             time.sleep(T0)
-        if (b == '1'):
+        elif b == '1':
             sync()
             fp.seek(offset)
             print("1 read %d bytes" % len(fp.read(readsize)))
@@ -44,7 +44,7 @@ def manchester(bits):
     for b in list(bits):
         if b == '0':
             r += '01'
-        if b == '1':
+        elif b == '1':
             r += '10'
     return r
 
